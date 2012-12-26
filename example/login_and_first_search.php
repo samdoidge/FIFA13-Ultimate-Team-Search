@@ -24,6 +24,9 @@ require_once('lib/functionor.php');
  $hash = $e->eaEncode($secret);
  //display the hash on the screen
  echo "Your Hash: " . $hash . "<br />";
+
+//enter hardcoded hash here for now
+ $hash = "";
  
  $c = new Connector($user, $password, $hash);
  $info = $c->connect();

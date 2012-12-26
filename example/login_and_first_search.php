@@ -3,11 +3,11 @@
 /**
  * Include the respective files
  */
-require_once('lib/connector.php');
-require_once('lib/tradeor.php');
-require_once('lib/eahashor.php');
-require_once('lib/searchor.php');
-require_once('lib/functionor.php');
+require_once('../code/connector.php');
+require_once('../code/tradeor.php');
+require_once('../code/eahashor.php');
+require_once('../code/searchor.php');
+require_once('../code/functionor.php');
 
 
  //enter your username, password, secret answer in the variables below

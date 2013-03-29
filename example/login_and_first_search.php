@@ -5,10 +5,8 @@
  */
 require_once('../code/connector.php');
 require_once('../code/tradeor.php');
-require_once('../code/eahashor.php');
 require_once('../code/searchor.php');
 require_once('../code/functionor.php');
-
 
  //enter your username, password, secret answer in the variables below
  //should look something like
@@ -19,15 +17,11 @@ require_once('../code/functionor.php');
  $password = "";
  $secret = "";
  
-//we call the eaEncode function from the EAHashor file
- $e = new EAHashor();
- $hash = $e->eaEncode($secret);
+ exec('python ../code/EAhash.py '.$secret, $hash);
+ $hash = $hash[0];
  //display the hash on the screen
  echo "Your Hash: " . $hash . "<br />";
 
-//enter hardcoded hash here for now
- $hash = "";
- 
  $c = new Connector($user, $password, $hash);
  $info = $c->connect();
  

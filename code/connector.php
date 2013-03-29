@@ -49,7 +49,8 @@ class Connector {
 		curl_setopt($ch, CURLOPT_HEADER, true);                                                                      
 		curl_setopt($ch, CURLOPT_HTTPHEADER, array(                                                                          
 			'Content-Type: application/x-www-form-urlencoded',                                                                                
-			'Content-Length: ' . strlen($data_string))                                                                       
+			'Content-Length: ' . strlen($data_string),
+			'Referer: http://www.ea.com/uk/football/')                                                                 
 		);                                                                                                                   
 
 		$response = curl_exec($ch);
@@ -59,11 +60,11 @@ class Connector {
 		$r = explode("\r\n", $h);
 		
 		//EASW Key
-		$s = explode(":", $r[6]);
+		$s = explode(":", $r[10]);
 		$t = explode(";", $s[1]);
 		$EASW_KEY = $t[0]; 
 		//Session Key
-		$m = explode(":", $r[7]);
+		$m = explode(":", $r[11]);
 		$n = explode(";", $m[1]);
 		$EASF_SESS = $n[0];
 		//nuc
@@ -189,7 +190,7 @@ class Connector {
 		$r = explode("\r\n", $EAVALIDATE);
 
 		//Phishing Key
-		$s = explode(":", $r[6]);
+		$s = explode(":", $r[11]);
 		$t = explode(";", $s[1]);
 		$PHISHKEY = $t[0];
 		//Display the Phishing Key 

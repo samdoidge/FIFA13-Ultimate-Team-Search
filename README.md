@@ -1,8 +1,8 @@
-![FIFA13 Ultimate Team Search](http://i.imgur.com/gUxon.png)
-
-Only tested for PS3 account - will need changes for Xbox.
+Only tested for PS3 account - will need changes for Xbox. Working in May 2013.
 
 # FIFA13 Ultimate Team Search
+
+From previous fork: 
 
 Having found [pmzipko's](http://pastebin.com/Zu5uDP7X) code to access the EA FIFA Web APP for FIFA11 and then writting a [wrapper](https://github.com/mousey/FIFA12-Ultimate-Team-Search) for FIFA12. 
 I thought I'd update the code to work with EA's latest and greatest FIFA13
